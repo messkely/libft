@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lsttiter_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 22:55:03 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/17 23:06:52 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/20 09:31:34 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_lsttiter(t_list *lst, void (*f)(void *))
+#include "libft.h"
+
+void	ft_lsttiter(t_list *lst, void (*f)(void *))
 {
-    if (!lst || !f)
-        return ;
-    while (*lst != NULL)
-    {
-        (*f)(lst->content);
-        lst = lst->next;
-    }
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		(*f)(lst->content);
+		lst = lst->next;
+	}
 }

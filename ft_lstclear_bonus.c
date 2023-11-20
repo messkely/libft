@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 19:07:48 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/17 23:36:28 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/20 09:18:28 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (*lst)
 	{
 		p = (*lst)->next;
-		ft_lstdelone(*lst, del);
+		ft_lstdelone(lst, del);
 		*lst = p;
 	}
 }

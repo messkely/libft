@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:13:51 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/15 17:37:09 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/20 11:07:55 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,6 @@ static int	ft_check(char s, char c)
 	if (s == c)
 		return (1);
 	return (0);
-}
-
-static int	len_word(const char *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] && !ft_check(s[i], c))
-		i++;
-	return (i);
 }
 
 static int	num_words(const char *s, char c)
@@ -48,37 +38,33 @@ static int	num_words(const char *s, char c)
 	return (count);
 }
 
-static char	*ft_word(const char *str, char c)
+static char	*ft_word(const char *s, char c)
 {
 	int		i;
 	int		len_w;
 	char	*ptr;
 
-	i = 0;
-	len_w = len_word(str, c);
+	len_w = 0;
+	while (s[len_w] && !ft_check(s[len_w], c))
+		len_w++;
 	ptr = (char *)malloc((len_w + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
+	i = 0;
 	while (i < len_w)
 	{
-		ptr[i] = str[i];
+		ptr[i] = s[i];
 		i++;
 	}
 	ptr[i] = '\0';
 	return (ptr);
 }
 
-char	**ft_split(const char *s, char c)
+static char	**split_part(const char *s, char c, char **ptr)
 {
-	int		j;
-	int		len;
-	char	**ptr;
+	int	j;
 
 	j = 0;
-	len = num_words(s, c);
-	ptr = (char **)malloc((len + 1) * sizeof(char *));
-	if (!ptr)
-		return (NULL);
 	while (*s)
 	{
 		while (*s != '\0' && ft_check(*s, c))
@@ -100,4 +86,18 @@ char	**ft_split(const char *s, char c)
 	}
 	ptr[j] = 0;
 	return (ptr);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	int		j;
+	int		len;
+	char	**ptr;
+
+	j = 0;
+	len = num_words(s, c);
+	ptr = (char **)malloc((len + 1) * sizeof(char *));
+	if (!ptr)
+		return (NULL);
+	return (split_part(s, c, ptr));
 }
