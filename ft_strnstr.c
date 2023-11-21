@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:07:53 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/20 13:05:35 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:16:58 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	if (!haystack && !len)
 		return (0);
+	if (needle == haystack || !needle)
+		return ((char *)haystack);
 	while (i < len)
 	{
 		j = 0;

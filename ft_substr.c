@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:47:32 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/15 17:53:42 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:59:10 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ptr;
 
 	i = 0;
-	if (start >= ft_strlen(s))
+	if (start >= ft_strlen(s) || !len)
 		return (ft_strdup(""));
 	ptr = (char *)malloc((len + 1) * sizeof(char));
 	if (!ptr)
