@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:14:27 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/20 12:01:00 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:44:38 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 	char	*ptr;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	len = s1_len + s2_len;
-	if (!s1 || !s2)
-		return (NULL);
 	ptr = (char *)malloc((len + 1) * sizeof(char));
 	if (!ptr)
 		return (0);

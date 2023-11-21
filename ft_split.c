@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:13:51 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/20 11:07:55 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:57:53 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,8 @@ char	**ft_split(const char *s, char c)
 	int		len;
 	char	**ptr;
 
+	if (!s)
+		return (NULL);
 	j = 0;
 	len = num_words(s, c);
 	ptr = (char **)malloc((len + 1) * sizeof(char *));
