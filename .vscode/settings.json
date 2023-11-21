@@ -2,5 +2,6 @@
     "files.associations": {
         "__node_handle": "c",
         "sstream": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
