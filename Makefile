@@ -9,7 +9,7 @@ B_FILES := \
    ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 OBJS :=	$(C_FILES:.c=.o)
 BOBJS := $(B_FILES:.c=.o)
-CC := gcc
+CC := cc
 CFLAG := -Wall -Wextra -Werror
 INCS := .
 LIBC := ar rc

@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:41:36 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/21 23:47:05 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:47:10 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,17 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+int main() {
+    int dst[20];
+    const int src[] = {1337,46,997};
+    size_t n = 12; // number of bytes
+    int *r = ft_memcpy(dst, src, n);
+    for (size_t i = 0; i < 3; ++i) {
+        printf("%d ", dst[i]);
+    }
+    printf("\n");
+    return 0;
+}
+
 

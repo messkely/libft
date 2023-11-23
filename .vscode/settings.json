@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "__node_handle": "c",
-        "sstream": "c"
+        "sstream": "c",
+        "ctype.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
