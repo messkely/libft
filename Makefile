@@ -12,7 +12,7 @@ BOBJS := $(B_FILES:.c=.o)
 CC := cc
 CFLAG := -Wall -Wextra -Werror
 INCS := .
-LIBC := ar rc
+LIBC := ar rcs
 RM := rm -f
 
 all: $(NAME)
@@ -22,7 +22,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(LIBC) $(NAME) $(OBJS)
-bonus: $(NAME) $(BOBJS)
+bonus: $(BOBJS)
 	$(LIBC) $(NAME) $(BOBJS)
 
 clean:

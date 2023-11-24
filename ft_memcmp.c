@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:09:57 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/12 19:47:11 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/24 11:06:00 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	}
 	return (0);
+}
+int main()
+{
+	int s1[] = {1,2,3};
+	int s2[] = {2,3,4};
+	
 }

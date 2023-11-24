@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:56:13 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/23 18:39:41 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/24 12:18:58 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +27,6 @@
 //     return b;  // Return the original pointer
 // }
 
-// int main()
-// {
-//     int b[20] = {1, 2, 3};
-//     int c = 255;
-//     size_t n = 12;
-//     int *res = ft_memset(b, c, n);
-
-//     for (size_t i = 0; i < 4; ++i) {
-//         printf("%d\n", (int)res[i]);  // Cast to int before printing
-//     }
-
-//     printf("\n");
-
-//     return 0;
-// }
 
 #include <stdio.h>
 
@@ -62,12 +47,12 @@ void *ft_memset(void *b, int c, size_t len)
 #include <string.h>
 int main()
 {
-    int b[] = {1, 2, 3};
-    ft_memset(b + 2, 1333, 12);
+     size_t len = 10;
+    int b[len];
+    ft_memset(b, 252, len);
 
-    for (size_t i = 0; i < 3; ++i)
+    for (size_t i = 0; i < len; ++i)
         printf("%d ", b[i]);
-
     printf("\n");
 
     return 0;

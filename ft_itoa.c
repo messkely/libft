@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:58:46 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/21 10:45:12 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/24 10:49:06 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,11 @@ char	*ft_itoa(int n)
 		nb *= -1;
 	}
 	return (ft_convertnbr(ptr, nb, len));
+}
+int main()
+{
+	int c = -2993;
+	// ft_bzero(s,3);
+	// for (int i = 0;i < 3;i++)
+		printf("%s",ft_itoa(c));
 }
