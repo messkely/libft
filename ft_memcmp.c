@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:09:57 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/24 11:06:00 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/25 11:25:25 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+#include <stdio.h>
+#include <string.h>
 int main()
 {
-	int s1[] = {1,2,3};
-	int s2[] = {2,3,4};
+	int s1[] = {10,10,30};
+	int s2[] = {2,8,4};
+	printf("%d\n", ft_memcmp(s1,s2,2));
+	printf("%d\n", memcmp(s1,s2,2));
 	
 }

@@ -6,7 +6,7 @@
 int main()
 {
     int fd;
-    fd = open("text1.txt", O_WRONLY | O_CREAT | O_RDONLY, 0700);
+    fd = open("text1.txt", O_WRONLY | O_CREAT | O_RDONLY, 700);
     printf("fd = %d\n", fd);
     write(fd, "hello", 5);
     if (fd == -1)

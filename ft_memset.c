@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:56:13 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/24 12:18:58 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/25 11:38:20 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ void *ft_memset(void *b, int c, size_t len)
 #include <string.h>
 int main()
 {
-     size_t len = 10;
-    int b[len];
-    ft_memset(b, 252, len);
+    int b[20] = {1,2,3};
+   ft_memset(b, 5, 2);
+   ft_memset(b, 57, 1);
 
-    for (size_t i = 0; i < len; ++i)
+    for (size_t i = 0; i < 3; ++i)
         printf("%d ", b[i]);
     printf("\n");
 
