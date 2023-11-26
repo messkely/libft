@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 18:05:13 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/24 16:36:39 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/26 18:52:39 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <stdio.h>
 # include <unistd.h>
 
 int		ft_isalpha(int c);

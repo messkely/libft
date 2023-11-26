@@ -1,0 +1,11 @@
+1 . Variable Stronge Classes
+    "https://youtu.be/1Dkfmf4PmvQ?si=XzAEi3-W8y_tNT0p"
+
+    * Automatic: auto
+    * Optimization Hint: register
+    * Static Storage: static
+    * External References: extern
+    * Private Variables: static
+    * Variable Initialization
+
+2 . SEgmentation fault

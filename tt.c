@@ -1,11 +1,17 @@
+// C program to demonstrate segmentation fault
+// by modifying a string literal
 #include <stdio.h>
 
-int main() {
-    char Char = -128;
-    unsigned char unsignedChar = -128;
+int main()
+{
+	char* str;
 
-    printf("Signed Char: %d\n", Char);
-    printf("Unsigned Char: %d\n", unsignedChar);
+	// Stored in read only part of data segment //
+	str = "GfG";
 
-    return 0;
+	// Problem: trying to modify read only memory //
+	*(str + 1) = 'n';
+    printf("%s\n",str);
+	return 0;
 }
+
