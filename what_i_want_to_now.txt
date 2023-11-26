@@ -8,4 +8,5 @@
     * Private Variables: static
     * Variable Initialization
 
-2 . SEgmentation fault
+2 . Segmentation fault
+    https://www.geeksforgeeks.org/storage-for-strings-in-c/
