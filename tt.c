@@ -1,17 +1,16 @@
 // C program to demonstrate segmentation fault
 // by modifying a string literal
 #include <stdio.h>
-
+#include <string.h>
+int b;
 int main()
 {
-	char* str;
-
-	// Stored in read only part of data segment //
-	str = "GfG";
-
-	// Problem: trying to modify read only memory //
-	*(str + 1) = 'n';
-    printf("%s\n",str);
+	char a[3];
+	a = NULL;
+	printf("a = %p\n",a);
+	printf("a = %p\n",&a);
+	// printf("b = %d",b);
 	return 0;
 }
-
+// 0x7ffee2c11800
+// 0x7ffeec49d800

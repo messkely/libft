@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:02:59 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/23 20:03:28 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/27 18:08:01 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@
 
 #include <stdio.h>
 
-void f_toupper(char *c) {
-    if (*c >= 'a' && *c <= 'z') {
-        *c -= 32;
-    }
-}
+// void f_toupper(char *c) {
+//     if (*c >= 'a' && *c <= 'z') {
+//         *c -= 32;
+//     }
+// }
 
-void to_upper(unsigned int i, char *c) {
-    f_toupper(c);
-}
+// void to_upper(unsigned int i, char *c) {
+//     f_toupper(c);
+// }
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*)) {
     int i;
@@ -56,15 +56,15 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*)) {
     }
 }
 
-int main() {
-    char str[] = "hello, world!";
+// int main() {
+//     char str[] = "hello, world!";
 
-    ft_striteri(str, to_upper);
+//     ft_striteri(str, to_upper);
 
-    printf("%s\n", str);
+//     printf("%s\n", str);
 
-    return 0;
-}
+//     return 0;
+// }"  fhfkg ldl   "
 
 
 

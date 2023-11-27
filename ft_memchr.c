@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:35:30 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/25 12:33:20 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/27 17:43:19 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,15 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-int main()
-{
-	int a[] = {1,2,3,4,5,6,7};
-	int *r = ft_memchr(a, 2, 7);
-	printf("%d\n", r[0]);
-	printf("%d\n", r[1]);
-	printf("%d\n", r[2]);
-	printf("%d\n", r[3]);
-	printf("%d\n", r[4]);
-	printf("%d\n", r[5]);
+// int main()
+// {
+// 	int a[] = {1,2,3,4,5,6,7};
+// 	int *r = ft_memchr(a, 2, 7);
+// 	printf("%d\n", r[0]);
+// 	printf("%d\n", r[1]);
+// 	printf("%d\n", r[2]);
+// 	printf("%d\n", r[3]);
+// 	printf("%d\n", r[4]);
+// 	printf("%d\n", r[5]);
 
-}
+// }

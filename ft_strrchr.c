@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:20:22 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/11 11:58:23 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/27 17:42:28 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,9 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (0);
 }
+// int main()
+// {
+// 	char s[] = "helo\0ohfj";
+// 	char c = 'o';
+// 	printf("%s\n",ft_strrchr(s,c));
+// }
