@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:41:36 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/27 14:45:07 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 13:24:41 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char		*ptr_dst;
 	const char	*ptr_src;
 
-	 
+	if (dst == src || n == 0)
+		return (dst);
 	i = 0;
 	ptr_dst = (char *)dst;
 	ptr_src = (const char *)src;
@@ -29,21 +30,33 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-// #include <libc.h>
+
+// no segmentation fault
 // int main()
 // {
-
-	
-// 	int dst[4];
-// 	const int src[] = {1,2,3,4};
-// 	char  *f =  NULL;
-// 	char *f1 =  "kk";
-// 	printf("%s\n",ft_memcpy(f,f1, 1));
-// 	//printf("%s\n",memcpy(f,f1, 1));
-// 	//int *r = ft_memcpy(dst,src,4);
-// 	//printf("%d\n",r[0]);
-// 	//printf("%d\n",r[1]);
-// 	//printf("%d\n",r[2]); 
+// 	printf("%s\n", ft_memcpy("yNULL","NULL",20));
 // }
 
+// no segmentation fault
+// int main()
+// {
+// 	printf("%s\n", ft_memcpy(NULL,NULL,20));
+// }
 
+// no segmentation fault
+// int main()
+// {
+// 	printf("%s\n", ft_memcpy(NULL,"asd",0));
+// }
+
+// bus error
+// int main()
+// {
+// 	printf("%s\n", ft_memcpy(NULL,"sdjd",10));
+// }
+
+// segmentation fault
+// int main()
+// {
+// 	printf("%s\n", ft_memcpy("asd",NULL,3));
+// }

@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:47:32 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/21 14:09:51 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:51:27 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	ptr[len] = '\0';
 	return (ptr);
+}
+
+int main()
+{
+	printf("%s ",ft_substr(NULL, 0, 0));
 }

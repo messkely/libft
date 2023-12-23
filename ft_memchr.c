@@ -6,12 +6,12 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:35:30 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/27 17:43:19 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 15:16:14 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*new_s;
@@ -27,15 +27,20 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
+// no segmentation fault
 // int main()
 // {
-// 	int a[] = {1,2,3,4,5,6,7};
-// 	int *r = ft_memchr(a, 2, 7);
-// 	printf("%d\n", r[0]);
-// 	printf("%d\n", r[1]);
-// 	printf("%d\n", r[2]);
-// 	printf("%d\n", r[3]);
-// 	printf("%d\n", r[4]);
-// 	printf("%d\n", r[5]);
+// 	printf("%s\n", ft_memchr("djdklj",0,2));
+// }
 
+// segmentation fault
+// int main()
+// {
+// 	printf("%s\n", ft_memchr(NULL,'j',2));
+// }
+
+// no segmentation fault
+// int main()
+// {
+// 	printf("%s\n", ft_memchr("sss",'s',20));
 // }

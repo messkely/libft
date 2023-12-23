@@ -6,76 +6,53 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:56:13 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/27 17:42:03 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:03:36 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// void *ft_memset(void *b, int c, size_t len)
-// {
-//     size_t i;
-//     unsigned char *ptr;
-
-//     ptr = b;
-//     i = 0;
-//     while (i < len)
-//     {
-//         ptr[i] = (unsigned char)c;
-//         i++;
-//     }
-//     return b;  // Return the original pointer
-// }
-
-
-#include <stdio.h>
-
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    size_t i;
-    unsigned char *ptr;
+	size_t			i;
+	unsigned char	*ptr;
 
-    ptr = b;
-    i = 0;
-    while (i < len)
-    {
-        ptr[i] = (unsigned char)c;
-        i++;
-    }
-    return (ptr);
+	ptr = b;
+	i = 0;
+	while (i < len)
+	{
+		ptr[i] = (unsigned char)c;
+		i++;
+	}
+	return (ptr);
 }
+
+// no segmentation fault
 // int main()
 // {
-//     int n = -1;
-//     ft_memset(&n,255, 4);
-//     ft_memset(&n,255, 3);
-//     ft_memset(&n,254, 2);
-//     ft_memset(&n,212, 1);
-//     printf("%d\n",n);
+// 	printf("%s\n", ft_memset("yNULL","NULL",20));
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-// #include <string.h>
+// no segmentation fault
 // int main()
 // {
-//     char *s = "hello";
-//     char *p = NULL;
-//     unsigned long d = (unsigned long)s;
-//     for (int i = 0; i < 5; i++)
-//     {
-//         memset((char *)&p + i ,(char)d % 256, 1);
-//         d /= 256;
-//     }
-        
-//     printf("%s", p);
+// 	printf("%s\n", ft_memmove(NULL,NULL,20));
+// }
+
+// no segmentation fault
+// int main()
+// {
+// 	printf("%s\n", ft_memmove(NULL,"asd",0));
+// }
+
+// bus error
+// int main()
+// {
+// 	printf("%s\n", ft_memmove("jfod","sdjd",10));
+// }
+
+// segmentation fault
+// int main()
+// {
+// 	printf("%s\n", ft_memmove("asd",NULL,3));
 // }

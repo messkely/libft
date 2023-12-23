@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:14:27 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/21 14:07:36 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:25:25 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,3 +50,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strcat(ptr, s2);
 	return (ptr);
 }
+
+// int main()
+// {
+// 	printf("%s ",ft_strjoin(NULL, NULL));
+// }

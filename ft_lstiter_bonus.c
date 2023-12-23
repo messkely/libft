@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 22:55:03 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/21 11:06:07 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/21 09:35:34 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		return ;
 	while (lst)
 	{
-		(*f)(lst->content);
+		f(lst->content);
 		lst = lst->next;
 	}
 }

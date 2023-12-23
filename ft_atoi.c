@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:58:29 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/27 17:42:20 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 11:46:36 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,19 @@ int	ft_atoi(const char *str)
 			sign *= -1;
 		i++;
 	}
-	// while (ft_isdigit(str[i]) && str[i])
-	// {
-	// 	res = res * 10 + (str[i] - 48);
-	// 	if (0 > res && sign == -1)
-	// 		return (0);
-	// 	else if (0 > res && sign == 1)
-	// 		return (-1);
-	// 	i++;
-	// }
+	while (ft_isdigit(str[i]) && str[i])
+	{
+		res = res * 10 + (str[i] - 48);
+		if (0 > res && sign == -1)
+			return (0);
+		else if (0 > res && sign == 1)
+			return (-1);
+		i++;
+	}
 	return (sign * res);
 }
+
 // int main()
 // {
-// 	printf("%d\n",atoi("  -19258949"));
+// 	printf("%d",ft_atoi(NULL));
 // }

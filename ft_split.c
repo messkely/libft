@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:13:51 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/21 14:06:40 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:23:41 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,3 +103,7 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	return (split_part(s, c, ptr));
 }
+// int main()
+// {
+// 	printf("%s \n",ft_split(NULL,));
+// }

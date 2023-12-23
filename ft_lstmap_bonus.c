@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 23:08:05 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/20 09:36:35 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/21 12:52:41 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	r = 0;
 	while (lst)
 	{
-		tmp = ft_lstnew(f(lst->content));
+		tmp = ft_lstnew((*f)(lst->content));
 		if (!tmp)
 		{
 			ft_lstclear(&r, del);

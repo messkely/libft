@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:09:57 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/27 17:42:40 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 13:04:03 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,26 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-// #include <stdio.h>
-// #include <string.h>
+
+// segmentation fault
 // int main()
 // {
-// 	int s1[] = {10,10,30};
-// 	int s2[] = {2,8,4};
-// 	printf("%d\n", ft_memcmp(s1,s2,2));
-// 	printf("%d\n", memcmp(s1,s2,2));
-	
+// 	printf("%d\n", ft_memcmp("sss",'s',20));
+// }
+
+// segmentation fault
+// int main()
+// {
+// 	printf("%d\n", ft_memcmp(NULL,"djdf",20));
+// }
+
+// no segmentation fault
+// int main()
+// {
+// 	printf("%d\n", ft_memcmp(NULL,NULL,0));
+// }
+// segmentation fault
+// int main()
+// {
+// 	printf("%d\n", ft_memcmp(NULL,NULL,20));
 // }

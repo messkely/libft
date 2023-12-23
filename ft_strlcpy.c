@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:58:18 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/13 10:32:10 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:37:23 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	while (src[i])
 		i++;
 	return (i);
+}
+
+int main()
+{
+	printf("%zu ",ft_strlcat("uriei", "sde", 3));
 }

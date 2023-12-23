@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:09:30 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/11 12:34:42 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:39:58 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned char	ptr1;
 	unsigned char	ptr2;
 
+	if (!n)
+		return (0);
 	i = 0;
 	while ((s1[i] || s2[i]) && i < n)
 	{
@@ -28,4 +30,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	}
 	return (0);
+}
+
+int main()
+{
+	printf("%d ",ft_strncmp("uriei", NULL, 10));
 }

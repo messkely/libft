@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:18:19 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/15 21:08:51 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/26 18:22:40 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,27 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
-// char add_index(unsigned int index, char c)
-// {
-//     return c + index;
-// }
-//
-// int main()
-// {
-//     const char *input = "Hello";
-//  
-//     char *result = ft_strmapi(input, add_index);
-//
-//     if (result)
-//     {
-//         printf("Original: %s\n", input);
-//         printf("Modified: %s\n", result);
-//         free(result);
-//     }
-//     else
-//     {
-//         printf("Error: Memory allocation failed.\n");
-//     }
-//
-//     return 0;
-// }

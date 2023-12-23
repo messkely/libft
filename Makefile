@@ -11,14 +11,13 @@ OBJS =	$(C_FILES:.c=.o)
 BOBJS = $(B_FILES:.c=.o)
 CC = cc
 CFLAG = -Wall -Wextra -Werror
-INCS = .
-LIBC = ar rcs
+LIBC = ar rc
 RM = rm -f
 
 all: $(NAME)
 
 %.o:%.c libft.h
-	$(CC) $(CFLAG) -c $< -o $@ -I $(INCS)
+	$(CC) $(CFLAG) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(LIBC) $(NAME) $(OBJS)
@@ -29,8 +28,8 @@ clean:
 	$(RM) $(OBJS) $(BOBJS)
 
 fclean: clean
-	$(RM) $(bonus) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: clean bonus fclean re all
+.PHONY: clean

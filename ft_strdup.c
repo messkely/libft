@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:18:43 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/12 18:46:53 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:14:16 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,7 @@ char	*ft_strdup(const char *s1)
 	p[i] = '\0';
 	return (p);
 }
+// int main()
+// {
+// 	printf("%s\n",ft_strdup(NULL));
+// }

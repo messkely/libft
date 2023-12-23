@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 21:30:54 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/27 15:36:51 by messkely         ###   ########.fr       */
+/*   Updated: 2023/11/27 09:34:51 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
-/*
-int main()
-{
-    t_list *head = ft_lstnew("initial");
-    
-    ft_lstadd_back(&head, ft_lstnew("last b"));
-    t_list *current = head;
-    while (current->next != NULL)
-    {
-        printf("%s\n", current->content);
-        current = current->next;
-    }
-    printf("%s\n", current->content);
-    return 0;
-}*/
-

@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 18:05:13 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/27 15:36:26 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 11:40:13 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
-#include <fcntl.h>
+# include <limits.h>
+#include <stdio.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

@@ -6,7 +6,7 @@
 /*   By: messkely <messkely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:34:06 by messkely          #+#    #+#             */
-/*   Updated: 2023/11/24 10:39:06 by messkely         ###   ########.fr       */
+/*   Updated: 2023/12/22 11:47:28 by messkely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,14 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
+// segmentation fault
+// int main()
+// {
+// 	ft_bzero(NULL, 5);
+// }
+
+// NO segmentation fault
+int main()
+{
+	ft_bzero(NULL, 0);
+}
